@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F8C8DC">
+  <meta name="robots" content="noindex, nofollow">
+  <title>مفاجأة لكِ 🤍</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <noscript>
+    <p class="noscript">افتحي الرابط من متصفح يدعم JavaScript عشان تظهر المفاجأة 🤍</p>
+  </noscript>
+
+  <!-- ============ الصفحة الأولى: كلمة السر ============ -->
+  <main class="gate" id="gate">
+    <div class="gate-bg" aria-hidden="true"></div>
+    <div class="floaters" id="floaters" aria-hidden="true"></div>
+
+    <div class="gate-inner">
+      <h1 class="gate-title">إلى شهودتى بنتي، قطعة من جسدي وروحي</h1>
+
+      <div class="gate-main">
+        <form class="gate-form" id="gateForm" autocomplete="off" novalidate>
+          <label class="sr-only" for="pass">كلمة السر</label>
+          <div class="field" id="field">
+            <svg class="field-heart" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.7 4.5 6.4 4.5c2.1 0 3.8 1.2 5.6 3.3 1.8-2.1 3.5-3.3 5.6-3.3 3.7 0 5.6 3.8 4 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/>
+            </svg>
+            <input id="pass" name="pass" type="password" inputmode="numeric"
+                   autocomplete="off" autocapitalize="off" spellcheck="false"
+                   placeholder="كلمة السر" aria-describedby="passMsg">
+          </div>
+          <p class="gate-msg" id="passMsg" role="alert" aria-live="polite"></p>
+          <button class="gate-btn" id="gateBtn" type="submit">افتحي مفاجأتك</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ الصفحة الثانية: الرسالة ============ -->
+  <section class="scene" id="scene" hidden aria-label="رسالة عيد الميلاد">
+    <div class="scene-bg" aria-hidden="true"></div>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <div class="scene-inner">
+      <h2 class="greeting" id="greeting" tabindex="-1">كل سنة وانتي طيبة يا بنوتي</h2>
+
+      <div class="letter-wrap">
+        <article class="letter" id="letter">
+          <div class="letter-scroll" id="letterScroll" tabindex="0" role="region" aria-label="الرسالة">
+            <p>عشان دي عيد ميلادك ي اقرب حد ليا واخف ما ليا ع قلبي بير اسرارى حبيت اخليها زكره خالده ع قلبك تقدرى تخشي عليها ف اى وقت</p>
+            <p>كنت حابب اقولك انى بحبك اوي اوي وانك احلى واجمل ما رأت عيني دايما بكون مبهور بيكي وبجمالك وكل ما اشوفك بلاقيكي احلى واحلى من اخر مره وبلاقيني مبسوط اكتر واكتر عيوني بتلمع اول ما تلمح القمر الصغنون بتاعي</p>
+            <p>دايما معايا وف ضهرى وجنبي دايما بتحتويني وتحضنيني وتخففي عني</p>
+            <p>احلى واجمل زكريات عيشتها معاكى من اندومي ف الكليه ل ورك اسبيس ل كرييتف لمزاكره وزومات وسهر وتعب ووجودك جنبي صديقة الرحله</p>
+            <p>عرفتي تشاركيني ف كل تفصيله ف حياتى عرفتي تسرقي قلبي وعيني وتفكيري عرفتي تكوني حته مني وتبقي بنتي وحبيبتي وكل ما ليا عرفتي تخليني اشوفك احلى واجمل بنت ف الدنيا عرفتي تكوني امانى وملجئى</p>
+            <p class="wish">كل سنه وانتى اختى وصحبني وبنتي وحبيبتي</p>
+            <p class="wish">كل سنه وانتى سندى وضهررى وامانى وراحتى</p>
+            <p class="wish">كل سنه وانتى الى بتدلعيني وتبسطيني</p>
+            <p class="wish">كل سنه وانتى اقرب ليا من نفسه</p>
+            <p class="wish">كل سنه وانتى طيبه يست البنات</p>
+          </div>
+          <span class="scroll-hint" id="scrollHint" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </article>
+      </div>
+
+      <p class="closing" id="closing"><span class="closing-text">بحبك يا أجمل أقداري</span> <span class="closing-heart">❤️</span></p>
+    </div>
+  </section>
+
+  <!-- زر الموسيقى: يظهر تلقائيًا فقط لو ملف music.mp3 موجود جنب index.html -->
+  <button class="music" id="music" type="button" hidden aria-pressed="false" aria-label="تشغيل الموسيقى">
+    <svg class="ic-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="currentColor"/><circle cx="16.5" cy="16" r="2.5" fill="currentColor"/></svg>
+    <svg class="ic-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="currentColor"/><circle cx="16.5" cy="16" r="2.5" fill="currentColor"/><path d="M3 3l18 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+  </button>
+  <audio id="bgm" src="music.mp3" loop preload="metadata"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
